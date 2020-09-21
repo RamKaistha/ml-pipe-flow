@@ -14,8 +14,7 @@ X=df.drop(['del_p','R','Re'], axis=1)
 X=X.values
 
 X_train,X_test,y_train,y_test=train_test_split(X,Y,test_size=.1,random_state=101)
-
-########################################################################################
+####################################################################
 re=pd.DataFrame(data=X_test,columns=['velocity','dia1','density','viscoscity','dia2','Re'])
 
 #print(re)
@@ -26,9 +25,8 @@ X_test1.drop(['del_p','R'],axis=1,inplace=True)
 X_test1.to_csv('X_test1_for_ci_plot.csv',index=False)
 re.to_csv('X_test_for_ci_plot.csv',index=False)
 
-#################################################################################
 
-
+####################################################################
 
 scaler=StandardScaler()
 X_train=scaler.fit_transform(X_train)
